@@ -1,0 +1,41 @@
+Hello World!
+Testing printStr...
+Test 1: PASSED
+This string is not empty!
+Test 2: PASSED
+Testing printInt...
+-123
+Test 1: PASSED
+123
+Test 2: PASSED
+0
+Test 3: PASSED
+Testing readInt...
+Enter a negative integer: -6
+Test 1: PASSED
+Enter a positive integer: 9
+Test 2: PASSED
+Enter 0: 0
+Test 3: PASSED
+Enter a number greater than INT_MAX: 420420420420
+Test 4: PASSED
+Enter a non-integer: blabla
+Test 5: PASSED
+Testing printFlt...
+-123.456001
+Test 1: PASSED
+123.456001
+Test 2: PASSED
+0.0
+Test 3: PASSED
+Testing readFlt...
+Enter a negative float: -69.420
+Test 1: PASSED
+Enter a positive float: 55.55555
+Test 2: PASSED
+Enter 0: 0
+Test 3: PASSED
+Enter a non-float: 55bla
+Test 4: PASSED
+Testing done!
+Bye World!
