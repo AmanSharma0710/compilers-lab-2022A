@@ -1,0 +1,1636 @@
+
+multi line comment in line 1
+
+
+
+single line comment in line 6
+
+production in line 8 : function_specifier --> inline
+production in line 8 : type_specifier --> void
+production in line 8 : declaration_specifiers_opt --> epsilon 
+production in line 8 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 8 : declaration_specifiers_opt --> declaration_specifiers
+production in line 8 : declaration_specifiers --> function_specifier declaration_specifiers_opt
+production in line 8 : pointer_opt --> epsilon
+production in line 8 : direct_declarator --> IDENTIFIER
+IDENTIFIER = test
+production in line 8 : type_qualifier --> const
+production in line 8 : type_specifier --> int
+production in line 8 : declaration_specifiers_opt --> epsilon 
+production in line 8 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 8 : declaration_specifiers_opt --> declaration_specifiers
+production in line 8 : declaration_specifiers --> type_qualifier declaration_specifiers_opt
+production in line 8 : pointer_opt --> epsilon
+production in line 8 : direct_declarator --> IDENTIFIER
+IDENTIFIER = a
+production in line 8 : declarator --> pointer_opt direct_declarator
+production in line 8 : parameter_declaration --> declaration_specifiers declarator
+production in line 8 : parameter_list --> parameter_declaration
+production in line 8 : parameter_type_list --> parameter_list
+production in line 8 : direct_declarator --> direct_declarator ( parameter_type_list )
+production in line 8 : declarator --> pointer_opt direct_declarator
+production in line 8 : declaration_list_opt --> epsilon
+
+production in line 9 : storage_class_specifier --> auto
+production in line 9 : declaration_specifiers_opt --> epsilon 
+production in line 9 : declaration_specifiers --> storage_class_specifier declaration_specifiers_opt
+production in line 9 : pointer_opt --> epsilon
+production in line 9 : direct_declarator --> IDENTIFIER
+IDENTIFIER = b
+production in line 9 : declarator --> pointer_opt direct_declarator
+production in line 9 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 2
+production in line 9 : postfix_expression --> primary_expression
+production in line 9 : unary_expression --> postfix_expression
+production in line 9 : cast_expression --> unary_expression
+production in line 9 : multiplicative_expression --> cast_expression
+production in line 9 : additive_expression --> multiplicative_expression
+production in line 9 : shift_expression --> additive_expression
+production in line 9 : relational_expression --> shift_expression
+production in line 9 : equality_expression --> relational_expression
+production in line 9 : AND_expression --> equality_expression
+production in line 9 : exclusive_OR_expression --> AND_expression
+production in line 9 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 9 : logical_AND_expression --> inclusive_OR_expression
+production in line 9 : logical_OR_expression --> logical_AND_expression
+production in line 9 : conditional_expression --> logical_OR_expression
+production in line 9 : assignment_expression --> conditional_expression
+production in line 9 : initialiser --> assignment_expression
+production in line 9 : init_declarator --> declarator = initialiser
+production in line 9 : init_declarator_list --> init_declarator
+production in line 9 : init_declarator_list_opt --> init_declarator_list
+production in line 9 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 9 : block_item --> declaration
+production in line 9 : block_item_list --> block_item
+
+production in line 10 : type_specifier --> _Bool
+production in line 10 : declaration_specifiers_opt --> epsilon 
+production in line 10 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 10 : pointer_opt --> epsilon
+production in line 10 : direct_declarator --> IDENTIFIER
+IDENTIFIER = a
+production in line 10 : declarator --> pointer_opt direct_declarator
+production in line 10 : init_declarator --> declarator
+production in line 10 : init_declarator_list --> init_declarator
+production in line 10 : init_declarator_list_opt --> init_declarator_list
+production in line 10 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 10 : block_item --> declaration
+production in line 10 : block_item_list --> block_item_list block_item
+
+production in line 11 : type_specifier --> _Complex
+production in line 11 : declaration_specifiers_opt --> epsilon 
+production in line 11 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 11 : pointer_opt --> epsilon
+production in line 11 : direct_declarator --> IDENTIFIER
+IDENTIFIER = d
+production in line 11 : declarator --> pointer_opt direct_declarator
+production in line 11 : init_declarator --> declarator
+production in line 11 : init_declarator_list --> init_declarator
+production in line 11 : init_declarator_list_opt --> init_declarator_list
+production in line 11 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 11 : block_item --> declaration
+production in line 11 : block_item_list --> block_item_list block_item
+
+production in line 12 : type_specifier --> _Imaginary
+production in line 12 : declaration_specifiers_opt --> epsilon 
+production in line 12 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 12 : pointer_opt --> epsilon
+production in line 12 : direct_declarator --> IDENTIFIER
+IDENTIFIER = c
+production in line 12 : declarator --> pointer_opt direct_declarator
+production in line 12 : init_declarator --> declarator
+production in line 12 : init_declarator_list --> init_declarator
+production in line 12 : init_declarator_list_opt --> init_declarator_list
+production in line 12 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 12 : block_item --> declaration
+production in line 12 : block_item_list --> block_item_list block_item
+
+production in line 13 : expression_opt --> epsilon
+production in line 13 : jump_statement --> return expression_opt ;
+production in line 13 : statement --> jump_statement
+production in line 13 : block_item --> statement
+production in line 13 : block_item_list --> block_item_list block_item
+
+production in line 14 : block_item_list_opt --> block_item_list
+production in line 14 : compound_statement --> { block_item_list_opt }
+production in line 14 : function_definition --> declaration_specifiers declarator declaration_list_opt compound_statement
+production in line 14 : external_declaration --> function_definition
+production in line 14 : translation_unit --> external_declaration
+
+
+production in line 16 : identifier_opt --> IDENTIFIER
+IDENTIFIER = myEnum
+
+production in line 17 : enumerator --> ENUMERATION_CONSTANT
+ENUMERATION_CONSTANT = var1
+production in line 17 : enumerator_list --> enumerator
+production in line 17 : enumerator --> ENUMERATION_CONSTANT
+ENUMERATION_CONSTANT = var2
+production in line 17 : enumerator_list --> enumerator_list , enumerator
+production in line 17 : enumerator --> ENUMERATION_CONSTANT
+ENUMERATION_CONSTANT = var3
+production in line 17 : enumerator_list --> enumerator_list , enumerator
+
+production in line 18 : enumerator --> ENUMERATION_CONSTANT
+ENUMERATION_CONSTANT = var4
+production in line 18 : enumerator_list --> enumerator_list , enumerator
+production in line 18 : enum_specifier --> enum identifier_opt { enumerator_list }
+production in line 18 : type_specifier --> enum_specifier
+production in line 18 : declaration_specifiers_opt --> epsilon 
+production in line 18 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 18 : init_declarator_list_opt --> epsilon
+production in line 18 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 18 : external_declaration --> declaration
+production in line 18 : translation_unit --> translation_unit external_declaration
+
+
+production in line 20 : type_specifier --> void
+production in line 20 : declaration_specifiers_opt --> epsilon 
+production in line 20 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 20 : pointer_opt --> epsilon
+production in line 20 : direct_declarator --> IDENTIFIER
+IDENTIFIER = main
+production in line 20 : identifier_list_opt --> epsilon
+production in line 20 : direct_declarator --> direct_declarator ( identifier_list_opt )
+production in line 20 : declarator --> pointer_opt direct_declarator
+production in line 20 : declaration_list_opt --> epsilon
+
+production in line 21 : storage_class_specifier --> static
+production in line 21 : type_specifier --> int
+production in line 21 : declaration_specifiers_opt --> epsilon 
+production in line 21 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 21 : declaration_specifiers_opt --> declaration_specifiers
+production in line 21 : declaration_specifiers --> storage_class_specifier declaration_specifiers_opt
+production in line 21 : pointer_opt --> epsilon
+production in line 21 : direct_declarator --> IDENTIFIER
+IDENTIFIER = a
+production in line 21 : declarator --> pointer_opt direct_declarator
+production in line 21 : init_declarator --> declarator
+production in line 21 : init_declarator_list --> init_declarator
+production in line 21 : init_declarator_list_opt --> init_declarator_list
+production in line 21 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 21 : block_item --> declaration
+production in line 21 : block_item_list --> block_item
+
+production in line 22 : primary_expression --> IDENTIFIER
+IDENTIFIER = a
+production in line 22 : postfix_expression --> primary_expression
+production in line 22 : unary_expression --> postfix_expression
+production in line 22 : assignment_operator --> =
+production in line 22 : type_specifier --> float
+production in line 22 : specifier_qualifier_list_opt --> epsilon
+production in line 22 : specifier_qualifier_list --> type_specifier specifier_qualifier_list_opt
+production in line 22 : type_name --> specifier_qualifier_list
+production in line 22 : unary_expression --> sizeof ( type_name )
+production in line 22 : cast_expression --> unary_expression
+production in line 22 : multiplicative_expression --> cast_expression
+production in line 22 : additive_expression --> multiplicative_expression
+production in line 22 : shift_expression --> additive_expression
+production in line 22 : relational_expression --> shift_expression
+production in line 22 : equality_expression --> relational_expression
+production in line 22 : AND_expression --> equality_expression
+production in line 22 : exclusive_OR_expression --> AND_expression
+production in line 22 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 22 : logical_AND_expression --> inclusive_OR_expression
+production in line 22 : logical_OR_expression --> logical_AND_expression
+production in line 22 : conditional_expression --> logical_OR_expression
+production in line 22 : assignment_expression --> conditional_expression
+production in line 22 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 22 : expression --> assignment_expression
+production in line 22 : expression_opt --> expression
+production in line 22 : expression_statement --> expression_opt ;
+production in line 22 : statement --> expression_statement
+production in line 22 : block_item --> statement
+production in line 22 : block_item_list --> block_item_list block_item
+
+production in line 23 : type_specifier --> short
+production in line 23 : type_specifier --> int
+production in line 23 : declaration_specifiers_opt --> epsilon 
+production in line 23 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 23 : declaration_specifiers_opt --> declaration_specifiers
+production in line 23 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 23 : pointer_opt --> epsilon
+production in line 23 : direct_declarator --> IDENTIFIER
+IDENTIFIER = b
+production in line 23 : declarator --> pointer_opt direct_declarator
+production in line 23 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 2
+production in line 23 : postfix_expression --> primary_expression
+production in line 23 : unary_expression --> postfix_expression
+production in line 23 : cast_expression --> unary_expression
+production in line 23 : multiplicative_expression --> cast_expression
+production in line 23 : additive_expression --> multiplicative_expression
+production in line 23 : shift_expression --> additive_expression
+production in line 23 : relational_expression --> shift_expression
+production in line 23 : equality_expression --> relational_expression
+production in line 23 : AND_expression --> equality_expression
+production in line 23 : exclusive_OR_expression --> AND_expression
+production in line 23 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 23 : logical_AND_expression --> inclusive_OR_expression
+production in line 23 : logical_OR_expression --> logical_AND_expression
+production in line 23 : conditional_expression --> logical_OR_expression
+production in line 23 : assignment_expression --> conditional_expression
+production in line 23 : initialiser --> assignment_expression
+production in line 23 : init_declarator --> declarator = initialiser
+production in line 23 : init_declarator_list --> init_declarator
+production in line 23 : init_declarator_list_opt --> init_declarator_list
+production in line 23 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 23 : block_item --> declaration
+production in line 23 : block_item_list --> block_item_list block_item
+
+production in line 24 : type_specifier --> long
+production in line 24 : type_specifier --> int
+production in line 24 : declaration_specifiers_opt --> epsilon 
+production in line 24 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 24 : declaration_specifiers_opt --> declaration_specifiers
+production in line 24 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 24 : pointer_opt --> epsilon
+production in line 24 : direct_declarator --> IDENTIFIER
+IDENTIFIER = c
+production in line 24 : declarator --> pointer_opt direct_declarator
+production in line 24 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 24 : postfix_expression --> primary_expression
+production in line 24 : unary_expression --> postfix_expression
+production in line 24 : cast_expression --> unary_expression
+production in line 24 : multiplicative_expression --> cast_expression
+production in line 24 : additive_expression --> multiplicative_expression
+production in line 24 : shift_expression --> additive_expression
+production in line 24 : relational_expression --> shift_expression
+production in line 24 : equality_expression --> relational_expression
+production in line 24 : AND_expression --> equality_expression
+production in line 24 : exclusive_OR_expression --> AND_expression
+production in line 24 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 24 : logical_AND_expression --> inclusive_OR_expression
+production in line 24 : logical_OR_expression --> logical_AND_expression
+production in line 24 : conditional_expression --> logical_OR_expression
+production in line 24 : assignment_expression --> conditional_expression
+production in line 24 : initialiser --> assignment_expression
+production in line 24 : init_declarator --> declarator = initialiser
+production in line 24 : init_declarator_list --> init_declarator
+production in line 24 : init_declarator_list_opt --> init_declarator_list
+production in line 24 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 24 : block_item --> declaration
+production in line 24 : block_item_list --> block_item_list block_item
+
+production in line 25 : type_specifier --> int
+production in line 25 : declaration_specifiers_opt --> epsilon 
+production in line 25 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 25 : pointer_opt --> epsilon
+production in line 25 : direct_declarator --> IDENTIFIER
+IDENTIFIER = i
+production in line 25 : declarator --> pointer_opt direct_declarator
+production in line 25 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 0
+production in line 25 : postfix_expression --> primary_expression
+production in line 25 : unary_expression --> postfix_expression
+production in line 25 : cast_expression --> unary_expression
+production in line 25 : multiplicative_expression --> cast_expression
+production in line 25 : additive_expression --> multiplicative_expression
+production in line 25 : shift_expression --> additive_expression
+production in line 25 : relational_expression --> shift_expression
+production in line 25 : equality_expression --> relational_expression
+production in line 25 : AND_expression --> equality_expression
+production in line 25 : exclusive_OR_expression --> AND_expression
+production in line 25 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 25 : logical_AND_expression --> inclusive_OR_expression
+production in line 25 : logical_OR_expression --> logical_AND_expression
+production in line 25 : conditional_expression --> logical_OR_expression
+production in line 25 : assignment_expression --> conditional_expression
+production in line 25 : initialiser --> assignment_expression
+production in line 25 : init_declarator --> declarator = initialiser
+production in line 25 : init_declarator_list --> init_declarator
+production in line 25 : init_declarator_list_opt --> init_declarator_list
+production in line 25 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 25 : primary_expression --> IDENTIFIER
+IDENTIFIER = i
+production in line 25 : postfix_expression --> primary_expression
+production in line 25 : unary_expression --> postfix_expression
+production in line 25 : cast_expression --> unary_expression
+production in line 25 : multiplicative_expression --> cast_expression
+production in line 25 : additive_expression --> multiplicative_expression
+production in line 25 : shift_expression --> additive_expression
+production in line 25 : relational_expression --> shift_expression
+production in line 25 : primary_expression --> IDENTIFIER
+IDENTIFIER = a
+production in line 25 : postfix_expression --> primary_expression
+production in line 25 : unary_expression --> postfix_expression
+production in line 25 : cast_expression --> unary_expression
+production in line 25 : multiplicative_expression --> cast_expression
+production in line 25 : additive_expression --> multiplicative_expression
+production in line 25 : shift_expression --> additive_expression
+production in line 25 : relational_expression --> relational_expression < shift_expression
+production in line 25 : equality_expression --> relational_expression
+production in line 25 : AND_expression --> equality_expression
+production in line 25 : exclusive_OR_expression --> AND_expression
+production in line 25 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 25 : logical_AND_expression --> inclusive_OR_expression
+production in line 25 : logical_OR_expression --> logical_AND_expression
+production in line 25 : conditional_expression --> logical_OR_expression
+production in line 25 : assignment_expression --> conditional_expression
+production in line 25 : expression --> assignment_expression
+production in line 25 : expression_opt --> expression
+production in line 25 : primary_expression --> IDENTIFIER
+IDENTIFIER = i
+production in line 25 : postfix_expression --> primary_expression
+production in line 25 : postfix_expression --> postfix_expression ++
+production in line 25 : unary_expression --> postfix_expression
+production in line 25 : cast_expression --> unary_expression
+production in line 25 : multiplicative_expression --> cast_expression
+production in line 25 : additive_expression --> multiplicative_expression
+production in line 25 : shift_expression --> additive_expression
+production in line 25 : relational_expression --> shift_expression
+production in line 25 : equality_expression --> relational_expression
+production in line 25 : AND_expression --> equality_expression
+production in line 25 : exclusive_OR_expression --> AND_expression
+production in line 25 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 25 : logical_AND_expression --> inclusive_OR_expression
+production in line 25 : logical_OR_expression --> logical_AND_expression
+production in line 25 : conditional_expression --> logical_OR_expression
+production in line 25 : assignment_expression --> conditional_expression
+production in line 25 : expression --> assignment_expression
+production in line 25 : expression_opt --> expression
+
+
+single line comment in line 26
+production in line 27 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 27 : postfix_expression --> primary_expression
+production in line 27 : unary_expression --> postfix_expression
+production in line 27 : assignment_operator --> =
+production in line 27 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 27 : postfix_expression --> primary_expression
+production in line 27 : unary_expression --> postfix_expression
+production in line 27 : cast_expression --> unary_expression
+production in line 27 : multiplicative_expression --> cast_expression
+production in line 27 : additive_expression --> multiplicative_expression
+production in line 27 : shift_expression --> additive_expression
+production in line 27 : relational_expression --> shift_expression
+production in line 27 : equality_expression --> relational_expression
+production in line 27 : AND_expression --> equality_expression
+production in line 27 : exclusive_OR_expression --> AND_expression
+production in line 27 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 27 : postfix_expression --> primary_expression
+production in line 27 : unary_expression --> postfix_expression
+production in line 27 : cast_expression --> unary_expression
+production in line 27 : multiplicative_expression --> cast_expression
+production in line 27 : additive_expression --> multiplicative_expression
+production in line 27 : shift_expression --> additive_expression
+production in line 27 : relational_expression --> shift_expression
+production in line 27 : equality_expression --> relational_expression
+production in line 27 : AND_expression --> equality_expression
+production in line 27 : exclusive_OR_expression --> exclusive_OR_expression ^ AND_expression
+production in line 27 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 27 : logical_AND_expression --> inclusive_OR_expression
+production in line 27 : logical_OR_expression --> logical_AND_expression
+production in line 27 : conditional_expression --> logical_OR_expression
+production in line 27 : assignment_expression --> conditional_expression
+production in line 27 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 27 : expression --> assignment_expression
+production in line 27 : expression_opt --> expression
+production in line 27 : expression_statement --> expression_opt ;
+production in line 27 : statement --> expression_statement
+production in line 27 : block_item --> statement
+production in line 27 : block_item_list --> block_item
+
+production in line 28 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 28 : postfix_expression --> primary_expression
+production in line 28 : unary_expression --> postfix_expression
+production in line 28 : assignment_operator --> *=
+production in line 28 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 28 : postfix_expression --> primary_expression
+production in line 28 : unary_expression --> postfix_expression
+production in line 28 : cast_expression --> unary_expression
+production in line 28 : multiplicative_expression --> cast_expression
+production in line 28 : additive_expression --> multiplicative_expression
+production in line 28 : shift_expression --> additive_expression
+production in line 28 : relational_expression --> shift_expression
+production in line 28 : equality_expression --> relational_expression
+production in line 28 : AND_expression --> equality_expression
+production in line 28 : exclusive_OR_expression --> AND_expression
+production in line 28 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 28 : logical_AND_expression --> inclusive_OR_expression
+production in line 28 : logical_OR_expression --> logical_AND_expression
+production in line 28 : conditional_expression --> logical_OR_expression
+production in line 28 : assignment_expression --> conditional_expression
+production in line 28 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 28 : expression --> assignment_expression
+production in line 28 : expression_opt --> expression
+production in line 28 : expression_statement --> expression_opt ;
+production in line 28 : statement --> expression_statement
+production in line 28 : block_item --> statement
+production in line 28 : block_item_list --> block_item_list block_item
+
+production in line 29 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 29 : postfix_expression --> primary_expression
+production in line 29 : unary_expression --> postfix_expression
+production in line 29 : assignment_operator --> /=
+production in line 29 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 29 : postfix_expression --> primary_expression
+production in line 29 : unary_expression --> postfix_expression
+production in line 29 : cast_expression --> unary_expression
+production in line 29 : multiplicative_expression --> cast_expression
+production in line 29 : additive_expression --> multiplicative_expression
+production in line 29 : shift_expression --> additive_expression
+production in line 29 : relational_expression --> shift_expression
+production in line 29 : equality_expression --> relational_expression
+production in line 29 : AND_expression --> equality_expression
+production in line 29 : exclusive_OR_expression --> AND_expression
+production in line 29 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 29 : logical_AND_expression --> inclusive_OR_expression
+production in line 29 : logical_OR_expression --> logical_AND_expression
+production in line 29 : conditional_expression --> logical_OR_expression
+production in line 29 : assignment_expression --> conditional_expression
+production in line 29 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 29 : expression --> assignment_expression
+production in line 29 : expression_opt --> expression
+production in line 29 : expression_statement --> expression_opt ;
+production in line 29 : statement --> expression_statement
+production in line 29 : block_item --> statement
+production in line 29 : block_item_list --> block_item_list block_item
+
+production in line 30 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 30 : postfix_expression --> primary_expression
+production in line 30 : unary_expression --> postfix_expression
+production in line 30 : assignment_operator --> += 
+production in line 30 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 30 : postfix_expression --> primary_expression
+production in line 30 : unary_expression --> postfix_expression
+production in line 30 : cast_expression --> unary_expression
+production in line 30 : multiplicative_expression --> cast_expression
+production in line 30 : additive_expression --> multiplicative_expression
+production in line 30 : shift_expression --> additive_expression
+production in line 30 : relational_expression --> shift_expression
+production in line 30 : equality_expression --> relational_expression
+production in line 30 : AND_expression --> equality_expression
+production in line 30 : exclusive_OR_expression --> AND_expression
+production in line 30 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 30 : logical_AND_expression --> inclusive_OR_expression
+production in line 30 : logical_OR_expression --> logical_AND_expression
+production in line 30 : conditional_expression --> logical_OR_expression
+production in line 30 : assignment_expression --> conditional_expression
+production in line 30 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 30 : expression --> assignment_expression
+production in line 30 : expression_opt --> expression
+production in line 30 : expression_statement --> expression_opt ;
+production in line 30 : statement --> expression_statement
+production in line 30 : block_item --> statement
+production in line 30 : block_item_list --> block_item_list block_item
+
+production in line 31 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 31 : postfix_expression --> primary_expression
+production in line 31 : unary_expression --> postfix_expression
+production in line 31 : assignment_operator --> -= 
+production in line 31 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 31 : postfix_expression --> primary_expression
+production in line 31 : unary_expression --> postfix_expression
+production in line 31 : cast_expression --> unary_expression
+production in line 31 : multiplicative_expression --> cast_expression
+production in line 31 : additive_expression --> multiplicative_expression
+production in line 31 : shift_expression --> additive_expression
+production in line 31 : relational_expression --> shift_expression
+production in line 31 : equality_expression --> relational_expression
+production in line 31 : AND_expression --> equality_expression
+production in line 31 : exclusive_OR_expression --> AND_expression
+production in line 31 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 31 : logical_AND_expression --> inclusive_OR_expression
+production in line 31 : logical_OR_expression --> logical_AND_expression
+production in line 31 : conditional_expression --> logical_OR_expression
+production in line 31 : assignment_expression --> conditional_expression
+production in line 31 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 31 : expression --> assignment_expression
+production in line 31 : expression_opt --> expression
+production in line 31 : expression_statement --> expression_opt ;
+production in line 31 : statement --> expression_statement
+production in line 31 : block_item --> statement
+production in line 31 : block_item_list --> block_item_list block_item
+
+production in line 32 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 32 : postfix_expression --> primary_expression
+production in line 32 : unary_expression --> postfix_expression
+production in line 32 : cast_expression --> unary_expression
+production in line 32 : multiplicative_expression --> cast_expression
+production in line 32 : additive_expression --> multiplicative_expression
+production in line 32 : shift_expression --> additive_expression
+production in line 32 : relational_expression --> shift_expression
+production in line 32 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 32 : postfix_expression --> primary_expression
+production in line 32 : unary_expression --> postfix_expression
+production in line 32 : cast_expression --> unary_expression
+production in line 32 : multiplicative_expression --> cast_expression
+production in line 32 : additive_expression --> multiplicative_expression
+production in line 32 : shift_expression --> additive_expression
+production in line 32 : relational_expression --> relational_expression <= shift_expression
+production in line 32 : equality_expression --> relational_expression
+production in line 32 : AND_expression --> equality_expression
+production in line 32 : exclusive_OR_expression --> AND_expression
+production in line 32 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 32 : logical_AND_expression --> inclusive_OR_expression
+production in line 32 : logical_OR_expression --> logical_AND_expression
+production in line 32 : conditional_expression --> logical_OR_expression
+production in line 32 : assignment_expression --> conditional_expression
+production in line 32 : expression --> assignment_expression
+production in line 32 : jump_statement --> continue ;
+production in line 32 : statement --> jump_statement
+
+production in line 33 : selection_statement --> if ( expression ) statement
+production in line 33 : statement --> selection_statement
+production in line 33 : block_item --> statement
+production in line 33 : block_item_list --> block_item_list block_item
+production in line 33 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 33 : postfix_expression --> primary_expression
+production in line 33 : unary_expression --> postfix_expression
+production in line 33 : cast_expression --> unary_expression
+production in line 33 : multiplicative_expression --> cast_expression
+production in line 33 : additive_expression --> multiplicative_expression
+production in line 33 : shift_expression --> additive_expression
+production in line 33 : relational_expression --> shift_expression
+production in line 33 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 33 : postfix_expression --> primary_expression
+production in line 33 : unary_expression --> postfix_expression
+production in line 33 : cast_expression --> unary_expression
+production in line 33 : multiplicative_expression --> cast_expression
+production in line 33 : additive_expression --> multiplicative_expression
+production in line 33 : shift_expression --> additive_expression
+production in line 33 : relational_expression --> relational_expression >= shift_expression
+production in line 33 : equality_expression --> relational_expression
+production in line 33 : AND_expression --> equality_expression
+production in line 33 : exclusive_OR_expression --> AND_expression
+production in line 33 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 33 : logical_AND_expression --> inclusive_OR_expression
+production in line 33 : logical_OR_expression --> logical_AND_expression
+production in line 33 : conditional_expression --> logical_OR_expression
+production in line 33 : assignment_expression --> conditional_expression
+production in line 33 : expression --> assignment_expression
+production in line 33 : jump_statement --> continue ;
+production in line 33 : statement --> jump_statement
+
+production in line 34 : selection_statement --> if ( expression ) statement
+production in line 34 : statement --> selection_statement
+production in line 34 : block_item --> statement
+production in line 34 : block_item_list --> block_item_list block_item
+production in line 34 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 34 : postfix_expression --> primary_expression
+production in line 34 : unary_expression --> postfix_expression
+production in line 34 : assignment_operator --> &=
+production in line 34 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 34 : postfix_expression --> primary_expression
+production in line 34 : unary_expression --> postfix_expression
+production in line 34 : cast_expression --> unary_expression
+production in line 34 : multiplicative_expression --> cast_expression
+production in line 34 : additive_expression --> multiplicative_expression
+production in line 34 : shift_expression --> additive_expression
+production in line 34 : relational_expression --> shift_expression
+production in line 34 : equality_expression --> relational_expression
+production in line 34 : AND_expression --> equality_expression
+production in line 34 : exclusive_OR_expression --> AND_expression
+production in line 34 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 34 : logical_AND_expression --> inclusive_OR_expression
+production in line 34 : logical_OR_expression --> logical_AND_expression
+production in line 34 : conditional_expression --> logical_OR_expression
+production in line 34 : assignment_expression --> conditional_expression
+production in line 34 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 34 : expression --> assignment_expression
+production in line 34 : expression_opt --> expression
+production in line 34 : expression_statement --> expression_opt ;
+production in line 34 : statement --> expression_statement
+production in line 34 : block_item --> statement
+production in line 34 : block_item_list --> block_item_list block_item
+
+production in line 35 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 35 : postfix_expression --> primary_expression
+production in line 35 : unary_expression --> postfix_expression
+production in line 35 : cast_expression --> unary_expression
+production in line 35 : multiplicative_expression --> cast_expression
+production in line 35 : additive_expression --> multiplicative_expression
+production in line 35 : shift_expression --> additive_expression
+production in line 35 : relational_expression --> shift_expression
+production in line 35 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 35 : postfix_expression --> primary_expression
+production in line 35 : unary_expression --> postfix_expression
+production in line 35 : cast_expression --> unary_expression
+production in line 35 : multiplicative_expression --> cast_expression
+production in line 35 : additive_expression --> multiplicative_expression
+production in line 35 : shift_expression --> additive_expression
+production in line 35 : relational_expression --> relational_expression < shift_expression
+production in line 35 : equality_expression --> relational_expression
+production in line 35 : AND_expression --> equality_expression
+production in line 35 : exclusive_OR_expression --> AND_expression
+production in line 35 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 35 : logical_AND_expression --> inclusive_OR_expression
+production in line 35 : logical_OR_expression --> logical_AND_expression
+production in line 35 : conditional_expression --> logical_OR_expression
+production in line 35 : assignment_expression --> conditional_expression
+production in line 35 : expression --> assignment_expression
+production in line 35 : jump_statement --> continue ;
+production in line 35 : statement --> jump_statement
+
+production in line 36 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 36 : postfix_expression --> primary_expression
+production in line 36 : unary_expression --> postfix_expression
+production in line 36 : cast_expression --> unary_expression
+production in line 36 : multiplicative_expression --> cast_expression
+production in line 36 : additive_expression --> multiplicative_expression
+production in line 36 : shift_expression --> additive_expression
+production in line 36 : relational_expression --> shift_expression
+production in line 36 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 36 : postfix_expression --> primary_expression
+production in line 36 : unary_expression --> postfix_expression
+production in line 36 : cast_expression --> unary_expression
+production in line 36 : multiplicative_expression --> cast_expression
+production in line 36 : additive_expression --> multiplicative_expression
+production in line 36 : shift_expression --> additive_expression
+production in line 36 : relational_expression --> relational_expression > shift_expression
+production in line 36 : equality_expression --> relational_expression
+production in line 36 : AND_expression --> equality_expression
+production in line 36 : exclusive_OR_expression --> AND_expression
+production in line 36 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 36 : logical_AND_expression --> inclusive_OR_expression
+production in line 36 : logical_OR_expression --> logical_AND_expression
+production in line 36 : conditional_expression --> logical_OR_expression
+production in line 36 : assignment_expression --> conditional_expression
+production in line 36 : expression --> assignment_expression
+production in line 36 : jump_statement --> break ;
+production in line 36 : statement --> jump_statement
+
+production in line 37 : selection_statement --> if ( expression ) statement
+production in line 37 : statement --> selection_statement
+production in line 37 : selection_statement --> if ( expression ) statement else statement
+production in line 37 : statement --> selection_statement
+production in line 37 : block_item --> statement
+production in line 37 : block_item_list --> block_item_list block_item
+production in line 37 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 37 : postfix_expression --> primary_expression
+production in line 37 : unary_expression --> postfix_expression
+production in line 37 : assignment_operator --> %=
+production in line 37 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 37 : postfix_expression --> primary_expression
+production in line 37 : unary_expression --> postfix_expression
+production in line 37 : cast_expression --> unary_expression
+production in line 37 : multiplicative_expression --> cast_expression
+production in line 37 : additive_expression --> multiplicative_expression
+production in line 37 : shift_expression --> additive_expression
+production in line 37 : relational_expression --> shift_expression
+production in line 37 : equality_expression --> relational_expression
+production in line 37 : AND_expression --> equality_expression
+production in line 37 : exclusive_OR_expression --> AND_expression
+production in line 37 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 37 : logical_AND_expression --> inclusive_OR_expression
+production in line 37 : logical_OR_expression --> logical_AND_expression
+production in line 37 : conditional_expression --> logical_OR_expression
+production in line 37 : assignment_expression --> conditional_expression
+production in line 37 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 37 : expression --> assignment_expression
+production in line 37 : expression_opt --> expression
+production in line 37 : expression_statement --> expression_opt ;
+production in line 37 : statement --> expression_statement
+production in line 37 : block_item --> statement
+production in line 37 : block_item_list --> block_item_list block_item
+
+production in line 38 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 38 : postfix_expression --> primary_expression
+production in line 38 : unary_expression --> postfix_expression
+production in line 38 : assignment_operator --> |=
+production in line 38 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 38 : postfix_expression --> primary_expression
+production in line 38 : unary_expression --> postfix_expression
+production in line 38 : cast_expression --> unary_expression
+production in line 38 : multiplicative_expression --> cast_expression
+production in line 38 : additive_expression --> multiplicative_expression
+production in line 38 : shift_expression --> additive_expression
+production in line 38 : relational_expression --> shift_expression
+production in line 38 : equality_expression --> relational_expression
+production in line 38 : AND_expression --> equality_expression
+production in line 38 : exclusive_OR_expression --> AND_expression
+production in line 38 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 38 : logical_AND_expression --> inclusive_OR_expression
+production in line 38 : logical_OR_expression --> logical_AND_expression
+production in line 38 : conditional_expression --> logical_OR_expression
+production in line 38 : assignment_expression --> conditional_expression
+production in line 38 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 38 : expression --> assignment_expression
+production in line 38 : expression_opt --> expression
+production in line 38 : expression_statement --> expression_opt ;
+production in line 38 : statement --> expression_statement
+production in line 38 : block_item --> statement
+production in line 38 : block_item_list --> block_item_list block_item
+
+production in line 39 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 39 : postfix_expression --> primary_expression
+production in line 39 : unary_expression --> postfix_expression
+production in line 39 : assignment_operator --> ^=
+production in line 39 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 39 : postfix_expression --> primary_expression
+production in line 39 : unary_expression --> postfix_expression
+production in line 39 : cast_expression --> unary_expression
+production in line 39 : multiplicative_expression --> cast_expression
+production in line 39 : additive_expression --> multiplicative_expression
+production in line 39 : shift_expression --> additive_expression
+production in line 39 : relational_expression --> shift_expression
+production in line 39 : equality_expression --> relational_expression
+production in line 39 : AND_expression --> equality_expression
+production in line 39 : exclusive_OR_expression --> AND_expression
+production in line 39 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 39 : logical_AND_expression --> inclusive_OR_expression
+production in line 39 : logical_OR_expression --> logical_AND_expression
+production in line 39 : conditional_expression --> logical_OR_expression
+production in line 39 : assignment_expression --> conditional_expression
+production in line 39 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 39 : expression --> assignment_expression
+production in line 39 : expression_opt --> expression
+production in line 39 : expression_statement --> expression_opt ;
+production in line 39 : statement --> expression_statement
+production in line 39 : block_item --> statement
+production in line 39 : block_item_list --> block_item_list block_item
+
+production in line 40 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 40 : postfix_expression --> primary_expression
+production in line 40 : unary_expression --> postfix_expression
+production in line 40 : assignment_operator --> =
+production in line 40 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 40 : postfix_expression --> primary_expression
+production in line 40 : unary_expression --> postfix_expression
+production in line 40 : cast_expression --> unary_expression
+production in line 40 : multiplicative_expression --> cast_expression
+production in line 40 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 40 : postfix_expression --> primary_expression
+production in line 40 : unary_expression --> postfix_expression
+production in line 40 : cast_expression --> unary_expression
+production in line 40 : multiplicative_expression --> multiplicative_expression % cast_expression
+production in line 40 : additive_expression --> multiplicative_expression
+production in line 40 : shift_expression --> additive_expression
+production in line 40 : relational_expression --> shift_expression
+production in line 40 : equality_expression --> relational_expression
+production in line 40 : AND_expression --> equality_expression
+production in line 40 : exclusive_OR_expression --> AND_expression
+production in line 40 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 40 : logical_AND_expression --> inclusive_OR_expression
+production in line 40 : logical_OR_expression --> logical_AND_expression
+production in line 40 : conditional_expression --> logical_OR_expression
+production in line 40 : assignment_expression --> conditional_expression
+production in line 40 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 40 : expression --> assignment_expression
+production in line 40 : expression_opt --> expression
+production in line 40 : expression_statement --> expression_opt ;
+production in line 40 : statement --> expression_statement
+production in line 40 : block_item --> statement
+production in line 40 : block_item_list --> block_item_list block_item
+
+production in line 41 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 41 : postfix_expression --> primary_expression
+production in line 41 : unary_expression --> postfix_expression
+production in line 41 : assignment_operator --> =
+production in line 41 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 41 : postfix_expression --> primary_expression
+production in line 41 : unary_expression --> postfix_expression
+production in line 41 : cast_expression --> unary_expression
+production in line 41 : multiplicative_expression --> cast_expression
+production in line 41 : additive_expression --> multiplicative_expression
+production in line 41 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 41 : postfix_expression --> primary_expression
+production in line 41 : unary_expression --> postfix_expression
+production in line 41 : cast_expression --> unary_expression
+production in line 41 : multiplicative_expression --> cast_expression
+production in line 41 : additive_expression --> additive_expression + multiplicative_expression
+production in line 41 : shift_expression --> additive_expression
+production in line 41 : relational_expression --> shift_expression
+production in line 41 : equality_expression --> relational_expression
+production in line 41 : AND_expression --> equality_expression
+production in line 41 : exclusive_OR_expression --> AND_expression
+production in line 41 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 41 : logical_AND_expression --> inclusive_OR_expression
+production in line 41 : logical_OR_expression --> logical_AND_expression
+production in line 41 : conditional_expression --> logical_OR_expression
+production in line 41 : assignment_expression --> conditional_expression
+production in line 41 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 41 : expression --> assignment_expression
+production in line 41 : expression_opt --> expression
+production in line 41 : expression_statement --> expression_opt ;
+production in line 41 : statement --> expression_statement
+production in line 41 : block_item --> statement
+production in line 41 : block_item_list --> block_item_list block_item
+
+production in line 42 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 42 : postfix_expression --> primary_expression
+production in line 42 : unary_expression --> postfix_expression
+production in line 42 : assignment_operator --> =
+production in line 42 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 42 : postfix_expression --> primary_expression
+production in line 42 : unary_expression --> postfix_expression
+production in line 42 : cast_expression --> unary_expression
+production in line 42 : multiplicative_expression --> cast_expression
+production in line 42 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 42 : postfix_expression --> primary_expression
+production in line 42 : unary_expression --> postfix_expression
+production in line 42 : cast_expression --> unary_expression
+production in line 42 : multiplicative_expression --> multiplicative_expression * cast_expression
+production in line 42 : additive_expression --> multiplicative_expression
+production in line 42 : shift_expression --> additive_expression
+production in line 42 : relational_expression --> shift_expression
+production in line 42 : equality_expression --> relational_expression
+production in line 42 : AND_expression --> equality_expression
+production in line 42 : exclusive_OR_expression --> AND_expression
+production in line 42 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 42 : logical_AND_expression --> inclusive_OR_expression
+production in line 42 : logical_OR_expression --> logical_AND_expression
+production in line 42 : conditional_expression --> logical_OR_expression
+production in line 42 : assignment_expression --> conditional_expression
+production in line 42 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 42 : expression --> assignment_expression
+production in line 42 : expression_opt --> expression
+production in line 42 : expression_statement --> expression_opt ;
+production in line 42 : statement --> expression_statement
+production in line 42 : block_item --> statement
+production in line 42 : block_item_list --> block_item_list block_item
+
+production in line 43 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 43 : postfix_expression --> primary_expression
+production in line 43 : unary_expression --> postfix_expression
+production in line 43 : assignment_operator --> =
+production in line 43 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 43 : postfix_expression --> primary_expression
+production in line 43 : unary_expression --> postfix_expression
+production in line 43 : cast_expression --> unary_expression
+production in line 43 : multiplicative_expression --> cast_expression
+production in line 43 : additive_expression --> multiplicative_expression
+production in line 43 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 2
+production in line 43 : postfix_expression --> primary_expression
+production in line 43 : unary_expression --> postfix_expression
+production in line 43 : cast_expression --> unary_expression
+production in line 43 : multiplicative_expression --> cast_expression
+production in line 43 : additive_expression --> additive_expression - multiplicative_expression
+production in line 43 : shift_expression --> additive_expression
+production in line 43 : relational_expression --> shift_expression
+production in line 43 : equality_expression --> relational_expression
+production in line 43 : AND_expression --> equality_expression
+production in line 43 : exclusive_OR_expression --> AND_expression
+production in line 43 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 43 : logical_AND_expression --> inclusive_OR_expression
+production in line 43 : logical_OR_expression --> logical_AND_expression
+production in line 43 : conditional_expression --> logical_OR_expression
+production in line 43 : assignment_expression --> conditional_expression
+production in line 43 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 43 : expression --> assignment_expression
+production in line 43 : expression_opt --> expression
+production in line 43 : expression_statement --> expression_opt ;
+production in line 43 : statement --> expression_statement
+production in line 43 : block_item --> statement
+production in line 43 : block_item_list --> block_item_list block_item
+
+production in line 44 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 44 : postfix_expression --> primary_expression
+production in line 44 : unary_expression --> postfix_expression
+production in line 44 : assignment_operator --> =
+production in line 44 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 44 : postfix_expression --> primary_expression
+production in line 44 : unary_expression --> postfix_expression
+production in line 44 : cast_expression --> unary_expression
+production in line 44 : multiplicative_expression --> cast_expression
+production in line 44 : additive_expression --> multiplicative_expression
+production in line 44 : shift_expression --> additive_expression
+production in line 44 : relational_expression --> shift_expression
+production in line 44 : equality_expression --> relational_expression
+production in line 44 : AND_expression --> equality_expression
+production in line 44 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 4
+production in line 44 : postfix_expression --> primary_expression
+production in line 44 : unary_expression --> postfix_expression
+production in line 44 : cast_expression --> unary_expression
+production in line 44 : multiplicative_expression --> cast_expression
+production in line 44 : additive_expression --> multiplicative_expression
+production in line 44 : shift_expression --> additive_expression
+production in line 44 : relational_expression --> shift_expression
+production in line 44 : equality_expression --> relational_expression
+production in line 44 : AND_expression --> AND_expression & equality_expression
+production in line 44 : exclusive_OR_expression --> AND_expression
+production in line 44 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 44 : logical_AND_expression --> inclusive_OR_expression
+production in line 44 : logical_OR_expression --> logical_AND_expression
+production in line 44 : conditional_expression --> logical_OR_expression
+production in line 44 : assignment_expression --> conditional_expression
+production in line 44 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 44 : expression --> assignment_expression
+production in line 44 : expression_opt --> expression
+production in line 44 : expression_statement --> expression_opt ;
+production in line 44 : statement --> expression_statement
+production in line 44 : block_item --> statement
+production in line 44 : block_item_list --> block_item_list block_item
+
+production in line 45 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 45 : postfix_expression --> primary_expression
+production in line 45 : postfix_expression --> postfix_expression ++
+production in line 45 : unary_expression --> postfix_expression
+production in line 45 : cast_expression --> unary_expression
+production in line 45 : multiplicative_expression --> cast_expression
+production in line 45 : additive_expression --> multiplicative_expression
+production in line 45 : shift_expression --> additive_expression
+production in line 45 : relational_expression --> shift_expression
+production in line 45 : equality_expression --> relational_expression
+production in line 45 : AND_expression --> equality_expression
+production in line 45 : exclusive_OR_expression --> AND_expression
+production in line 45 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 45 : logical_AND_expression --> inclusive_OR_expression
+production in line 45 : logical_OR_expression --> logical_AND_expression
+production in line 45 : conditional_expression --> logical_OR_expression
+production in line 45 : assignment_expression --> conditional_expression
+production in line 45 : expression --> assignment_expression
+production in line 45 : expression_opt --> expression
+production in line 45 : expression_statement --> expression_opt ;
+production in line 45 : statement --> expression_statement
+production in line 45 : block_item --> statement
+production in line 45 : block_item_list --> block_item_list block_item
+
+production in line 46 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 46 : postfix_expression --> primary_expression
+production in line 46 : postfix_expression --> postfix_expression --
+production in line 46 : unary_expression --> postfix_expression
+production in line 46 : cast_expression --> unary_expression
+production in line 46 : multiplicative_expression --> cast_expression
+production in line 46 : additive_expression --> multiplicative_expression
+production in line 46 : shift_expression --> additive_expression
+production in line 46 : relational_expression --> shift_expression
+production in line 46 : equality_expression --> relational_expression
+production in line 46 : AND_expression --> equality_expression
+production in line 46 : exclusive_OR_expression --> AND_expression
+production in line 46 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 46 : logical_AND_expression --> inclusive_OR_expression
+production in line 46 : logical_OR_expression --> logical_AND_expression
+production in line 46 : conditional_expression --> logical_OR_expression
+production in line 46 : assignment_expression --> conditional_expression
+production in line 46 : expression --> assignment_expression
+production in line 46 : expression_opt --> expression
+production in line 46 : expression_statement --> expression_opt ;
+production in line 46 : statement --> expression_statement
+production in line 46 : block_item --> statement
+production in line 46 : block_item_list --> block_item_list block_item
+
+production in line 47 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 47 : postfix_expression --> primary_expression
+production in line 47 : unary_expression --> postfix_expression
+production in line 47 : cast_expression --> unary_expression
+production in line 47 : multiplicative_expression --> cast_expression
+production in line 47 : additive_expression --> multiplicative_expression
+production in line 47 : shift_expression --> additive_expression
+production in line 47 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 2
+production in line 47 : postfix_expression --> primary_expression
+production in line 47 : unary_expression --> postfix_expression
+production in line 47 : cast_expression --> unary_expression
+production in line 47 : multiplicative_expression --> cast_expression
+production in line 47 : additive_expression --> multiplicative_expression
+production in line 47 : shift_expression --> shift_expression << additive_expression
+production in line 47 : relational_expression --> shift_expression
+production in line 47 : equality_expression --> relational_expression
+production in line 47 : AND_expression --> equality_expression
+production in line 47 : exclusive_OR_expression --> AND_expression
+production in line 47 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 47 : logical_AND_expression --> inclusive_OR_expression
+production in line 47 : logical_OR_expression --> logical_AND_expression
+production in line 47 : conditional_expression --> logical_OR_expression
+production in line 47 : assignment_expression --> conditional_expression
+production in line 47 : expression --> assignment_expression
+production in line 47 : expression_opt --> expression
+production in line 47 : expression_statement --> expression_opt ;
+production in line 47 : statement --> expression_statement
+production in line 47 : block_item --> statement
+production in line 47 : block_item_list --> block_item_list block_item
+
+production in line 48 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 48 : postfix_expression --> primary_expression
+production in line 48 : unary_expression --> postfix_expression
+production in line 48 : cast_expression --> unary_expression
+production in line 48 : multiplicative_expression --> cast_expression
+production in line 48 : additive_expression --> multiplicative_expression
+production in line 48 : shift_expression --> additive_expression
+production in line 48 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 2
+production in line 48 : postfix_expression --> primary_expression
+production in line 48 : unary_expression --> postfix_expression
+production in line 48 : cast_expression --> unary_expression
+production in line 48 : multiplicative_expression --> cast_expression
+production in line 48 : additive_expression --> multiplicative_expression
+production in line 48 : shift_expression --> shift_expression >> additive_expression
+production in line 48 : relational_expression --> shift_expression
+production in line 48 : equality_expression --> relational_expression
+production in line 48 : AND_expression --> equality_expression
+production in line 48 : exclusive_OR_expression --> AND_expression
+production in line 48 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 48 : logical_AND_expression --> inclusive_OR_expression
+production in line 48 : logical_OR_expression --> logical_AND_expression
+production in line 48 : conditional_expression --> logical_OR_expression
+production in line 48 : assignment_expression --> conditional_expression
+production in line 48 : expression --> assignment_expression
+production in line 48 : expression_opt --> expression
+production in line 48 : expression_statement --> expression_opt ;
+production in line 48 : statement --> expression_statement
+production in line 48 : block_item --> statement
+production in line 48 : block_item_list --> block_item_list block_item
+
+production in line 49 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 49 : postfix_expression --> primary_expression
+production in line 49 : unary_expression --> postfix_expression
+production in line 49 : cast_expression --> unary_expression
+production in line 49 : multiplicative_expression --> cast_expression
+production in line 49 : additive_expression --> multiplicative_expression
+production in line 49 : shift_expression --> additive_expression
+production in line 49 : relational_expression --> shift_expression
+production in line 49 : equality_expression --> relational_expression
+production in line 49 : AND_expression --> equality_expression
+production in line 49 : exclusive_OR_expression --> AND_expression
+production in line 49 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 49 : logical_AND_expression --> inclusive_OR_expression
+production in line 49 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 49 : postfix_expression --> primary_expression
+production in line 49 : unary_expression --> postfix_expression
+production in line 49 : cast_expression --> unary_expression
+production in line 49 : multiplicative_expression --> cast_expression
+production in line 49 : additive_expression --> multiplicative_expression
+production in line 49 : shift_expression --> additive_expression
+production in line 49 : relational_expression --> shift_expression
+production in line 49 : equality_expression --> relational_expression
+production in line 49 : AND_expression --> equality_expression
+production in line 49 : exclusive_OR_expression --> AND_expression
+production in line 49 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 49 : logical_AND_expression --> logical_AND_expression && inclusive_OR_expression
+production in line 49 : logical_OR_expression --> logical_AND_expression
+production in line 49 : conditional_expression --> logical_OR_expression
+production in line 49 : assignment_expression --> conditional_expression
+production in line 49 : expression --> assignment_expression
+production in line 49 : jump_statement --> continue ;
+production in line 49 : statement --> jump_statement
+
+production in line 50 : jump_statement --> continue ;
+production in line 50 : statement --> jump_statement
+production in line 50 : selection_statement --> if ( expression ) statement else statement
+production in line 50 : statement --> selection_statement
+production in line 50 : block_item --> statement
+production in line 50 : block_item_list --> block_item_list block_item
+
+production in line 51 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 51 : postfix_expression --> primary_expression
+production in line 51 : unary_expression --> postfix_expression
+production in line 51 : cast_expression --> unary_expression
+production in line 51 : multiplicative_expression --> cast_expression
+production in line 51 : additive_expression --> multiplicative_expression
+production in line 51 : shift_expression --> additive_expression
+production in line 51 : relational_expression --> shift_expression
+production in line 51 : equality_expression --> relational_expression
+production in line 51 : AND_expression --> equality_expression
+production in line 51 : exclusive_OR_expression --> AND_expression
+production in line 51 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 51 : logical_AND_expression --> inclusive_OR_expression
+production in line 51 : logical_OR_expression --> logical_AND_expression
+production in line 51 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 51 : postfix_expression --> primary_expression
+production in line 51 : unary_expression --> postfix_expression
+production in line 51 : cast_expression --> unary_expression
+production in line 51 : multiplicative_expression --> cast_expression
+production in line 51 : additive_expression --> multiplicative_expression
+production in line 51 : shift_expression --> additive_expression
+production in line 51 : relational_expression --> shift_expression
+production in line 51 : equality_expression --> relational_expression
+production in line 51 : AND_expression --> equality_expression
+production in line 51 : exclusive_OR_expression --> AND_expression
+production in line 51 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 51 : logical_AND_expression --> inclusive_OR_expression
+production in line 51 : logical_OR_expression --> logical_OR_expression || logical_AND_expression
+production in line 51 : conditional_expression --> logical_OR_expression
+production in line 51 : assignment_expression --> conditional_expression
+production in line 51 : expression --> assignment_expression
+production in line 51 : jump_statement --> continue ;
+production in line 51 : statement --> jump_statement
+
+production in line 52 : selection_statement --> if ( expression ) statement
+production in line 52 : statement --> selection_statement
+production in line 52 : block_item --> statement
+production in line 52 : block_item_list --> block_item_list block_item
+production in line 52 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 52 : postfix_expression --> primary_expression
+production in line 52 : unary_expression --> postfix_expression
+production in line 52 : assignment_operator --> =
+production in line 52 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 52 : postfix_expression --> primary_expression
+production in line 52 : unary_expression --> postfix_expression
+production in line 52 : cast_expression --> unary_expression
+production in line 52 : multiplicative_expression --> cast_expression
+production in line 52 : additive_expression --> multiplicative_expression
+production in line 52 : shift_expression --> additive_expression
+production in line 52 : relational_expression --> shift_expression
+production in line 52 : equality_expression --> relational_expression
+production in line 52 : primary_expression --> IDENTIFIER
+IDENTIFIER = b
+production in line 52 : postfix_expression --> primary_expression
+production in line 52 : unary_expression --> postfix_expression
+production in line 52 : cast_expression --> unary_expression
+production in line 52 : multiplicative_expression --> cast_expression
+production in line 52 : additive_expression --> multiplicative_expression
+production in line 52 : shift_expression --> additive_expression
+production in line 52 : relational_expression --> shift_expression
+production in line 52 : equality_expression --> equality_expression != relational_expression
+production in line 52 : AND_expression --> equality_expression
+production in line 52 : exclusive_OR_expression --> AND_expression
+production in line 52 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 52 : logical_AND_expression --> inclusive_OR_expression
+production in line 52 : logical_OR_expression --> logical_AND_expression
+production in line 52 : conditional_expression --> logical_OR_expression
+production in line 52 : assignment_expression --> conditional_expression
+production in line 52 : expression --> assignment_expression
+production in line 52 : primary_expression --> ( expression )
+production in line 52 : postfix_expression --> primary_expression
+production in line 52 : unary_expression --> postfix_expression
+production in line 52 : cast_expression --> unary_expression
+production in line 52 : multiplicative_expression --> cast_expression
+production in line 52 : additive_expression --> multiplicative_expression
+production in line 52 : shift_expression --> additive_expression
+production in line 52 : relational_expression --> shift_expression
+production in line 52 : equality_expression --> relational_expression
+production in line 52 : AND_expression --> equality_expression
+production in line 52 : exclusive_OR_expression --> AND_expression
+production in line 52 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 52 : logical_AND_expression --> inclusive_OR_expression
+production in line 52 : logical_OR_expression --> logical_AND_expression
+production in line 52 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 52 : postfix_expression --> primary_expression
+production in line 52 : unary_expression --> postfix_expression
+production in line 52 : cast_expression --> unary_expression
+production in line 52 : multiplicative_expression --> cast_expression
+production in line 52 : additive_expression --> multiplicative_expression
+production in line 52 : shift_expression --> additive_expression
+production in line 52 : relational_expression --> shift_expression
+production in line 52 : equality_expression --> relational_expression
+production in line 52 : AND_expression --> equality_expression
+production in line 52 : exclusive_OR_expression --> AND_expression
+production in line 52 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 52 : logical_AND_expression --> inclusive_OR_expression
+production in line 52 : logical_OR_expression --> logical_AND_expression
+production in line 52 : conditional_expression --> logical_OR_expression
+production in line 52 : assignment_expression --> conditional_expression
+production in line 52 : expression --> assignment_expression
+production in line 52 : primary_expression --> IDENTIFIER
+IDENTIFIER = c
+production in line 52 : postfix_expression --> primary_expression
+production in line 52 : unary_expression --> postfix_expression
+production in line 52 : cast_expression --> unary_expression
+production in line 52 : multiplicative_expression --> cast_expression
+production in line 52 : additive_expression --> multiplicative_expression
+production in line 52 : shift_expression --> additive_expression
+production in line 52 : relational_expression --> shift_expression
+production in line 52 : equality_expression --> relational_expression
+production in line 52 : AND_expression --> equality_expression
+production in line 52 : exclusive_OR_expression --> AND_expression
+production in line 52 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 52 : logical_AND_expression --> inclusive_OR_expression
+production in line 52 : logical_OR_expression --> logical_AND_expression
+production in line 52 : conditional_expression --> logical_OR_expression
+production in line 52 : conditional_expression --> logical_OR_expression ? expression : conditional_expression
+production in line 52 : assignment_expression --> conditional_expression
+production in line 52 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 52 : expression --> assignment_expression
+production in line 52 : expression_opt --> expression
+production in line 52 : expression_statement --> expression_opt ;
+production in line 52 : statement --> expression_statement
+production in line 52 : block_item --> statement
+production in line 52 : block_item_list --> block_item_list block_item
+
+production in line 53 : block_item_list_opt --> block_item_list
+production in line 53 : compound_statement --> { block_item_list_opt }
+production in line 53 : statement --> compound_statement
+production in line 53 : iteration_statement --> for ( declaration expression_opt ; expression_opt ) statement
+production in line 53 : statement --> iteration_statement
+production in line 53 : block_item --> statement
+production in line 53 : block_item_list --> block_item_list block_item
+
+production in line 54 : type_specifier --> char
+production in line 54 : declaration_specifiers_opt --> epsilon 
+production in line 54 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 54 : pointer_opt --> epsilon
+production in line 54 : direct_declarator --> IDENTIFIER
+IDENTIFIER = s
+production in line 54 : type_qualifier_list_opt --> epsilon
+production in line 54 : assignment_expression_opt --> epsilon
+production in line 54 : direct_declarator --> direct_declarator [ type_qualifier_list_opt assignment_expression_opt ]
+production in line 54 : declarator --> pointer_opt direct_declarator
+production in line 54 : primary_expression --> STRING_LITERAL
+STRING_LITERAL = "\', \", \? \\, \a \b, \f, \n, \r, \t, \v"
+production in line 54 : postfix_expression --> primary_expression
+production in line 54 : unary_expression --> postfix_expression
+production in line 54 : cast_expression --> unary_expression
+production in line 54 : multiplicative_expression --> cast_expression
+production in line 54 : additive_expression --> multiplicative_expression
+production in line 54 : shift_expression --> additive_expression
+production in line 54 : relational_expression --> shift_expression
+production in line 54 : equality_expression --> relational_expression
+production in line 54 : AND_expression --> equality_expression
+production in line 54 : exclusive_OR_expression --> AND_expression
+production in line 54 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 54 : logical_AND_expression --> inclusive_OR_expression
+production in line 54 : logical_OR_expression --> logical_AND_expression
+production in line 54 : conditional_expression --> logical_OR_expression
+production in line 54 : assignment_expression --> conditional_expression
+production in line 54 : initialiser --> assignment_expression
+production in line 54 : init_declarator --> declarator = initialiser
+production in line 54 : init_declarator_list --> init_declarator
+production in line 54 : init_declarator_list_opt --> init_declarator_list
+production in line 54 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 54 : block_item --> declaration
+production in line 54 : block_item_list --> block_item_list block_item
+
+production in line 55 : type_specifier --> int
+production in line 55 : declaration_specifiers_opt --> epsilon 
+production in line 55 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 55 : type_qualifier_list_opt --> epsilon
+production in line 55 : pointer --> * type_qualifier_list_opt
+production in line 55 : pointer_opt --> pointer
+production in line 55 : direct_declarator --> IDENTIFIER
+IDENTIFIER = y
+production in line 55 : declarator --> pointer_opt direct_declarator
+production in line 55 : designation_opt --> epsilon
+production in line 55 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 55 : postfix_expression --> primary_expression
+production in line 55 : unary_expression --> postfix_expression
+production in line 55 : cast_expression --> unary_expression
+production in line 55 : multiplicative_expression --> cast_expression
+production in line 55 : additive_expression --> multiplicative_expression
+production in line 55 : shift_expression --> additive_expression
+production in line 55 : relational_expression --> shift_expression
+production in line 55 : equality_expression --> relational_expression
+production in line 55 : AND_expression --> equality_expression
+production in line 55 : exclusive_OR_expression --> AND_expression
+production in line 55 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 55 : logical_AND_expression --> inclusive_OR_expression
+production in line 55 : logical_OR_expression --> logical_AND_expression
+production in line 55 : conditional_expression --> logical_OR_expression
+production in line 55 : assignment_expression --> conditional_expression
+production in line 55 : initialiser --> assignment_expression
+production in line 55 : initialiser_list --> designation_opt initialiser
+production in line 55 : designation_opt --> epsilon
+production in line 55 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 2
+production in line 55 : postfix_expression --> primary_expression
+production in line 55 : unary_expression --> postfix_expression
+production in line 55 : cast_expression --> unary_expression
+production in line 55 : multiplicative_expression --> cast_expression
+production in line 55 : additive_expression --> multiplicative_expression
+production in line 55 : shift_expression --> additive_expression
+production in line 55 : relational_expression --> shift_expression
+production in line 55 : equality_expression --> relational_expression
+production in line 55 : AND_expression --> equality_expression
+production in line 55 : exclusive_OR_expression --> AND_expression
+production in line 55 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 55 : logical_AND_expression --> inclusive_OR_expression
+production in line 55 : logical_OR_expression --> logical_AND_expression
+production in line 55 : conditional_expression --> logical_OR_expression
+production in line 55 : assignment_expression --> conditional_expression
+production in line 55 : initialiser --> assignment_expression
+production in line 55 : initialiser_list --> initialiser_list , designation_opt initialiser
+production in line 55 : designation_opt --> epsilon
+production in line 55 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 3
+production in line 55 : postfix_expression --> primary_expression
+production in line 55 : unary_expression --> postfix_expression
+production in line 55 : cast_expression --> unary_expression
+production in line 55 : multiplicative_expression --> cast_expression
+production in line 55 : additive_expression --> multiplicative_expression
+production in line 55 : shift_expression --> additive_expression
+production in line 55 : relational_expression --> shift_expression
+production in line 55 : equality_expression --> relational_expression
+production in line 55 : AND_expression --> equality_expression
+production in line 55 : exclusive_OR_expression --> AND_expression
+production in line 55 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 55 : logical_AND_expression --> inclusive_OR_expression
+production in line 55 : logical_OR_expression --> logical_AND_expression
+production in line 55 : conditional_expression --> logical_OR_expression
+production in line 55 : assignment_expression --> conditional_expression
+production in line 55 : initialiser --> assignment_expression
+production in line 55 : initialiser_list --> initialiser_list , designation_opt initialiser
+production in line 55 : initialiser --> { initialiser_list }
+production in line 55 : init_declarator --> declarator = initialiser
+production in line 55 : init_declarator_list --> init_declarator
+production in line 55 : init_declarator_list_opt --> init_declarator_list
+production in line 55 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 55 : block_item --> declaration
+production in line 55 : block_item_list --> block_item_list block_item
+
+
+single line comment in line 56
+
+single line comment in line 57
+production in line 58 : type_specifier --> int
+production in line 58 : declaration_specifiers_opt --> epsilon 
+production in line 58 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 58 : pointer_opt --> epsilon
+production in line 58 : direct_declarator --> IDENTIFIER
+IDENTIFIER = q
+production in line 58 : declarator --> pointer_opt direct_declarator
+production in line 58 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 58 : postfix_expression --> primary_expression
+production in line 58 : unary_expression --> postfix_expression
+production in line 58 : cast_expression --> unary_expression
+production in line 58 : multiplicative_expression --> cast_expression
+production in line 58 : additive_expression --> multiplicative_expression
+production in line 58 : shift_expression --> additive_expression
+production in line 58 : relational_expression --> shift_expression
+production in line 58 : equality_expression --> relational_expression
+production in line 58 : AND_expression --> equality_expression
+production in line 58 : exclusive_OR_expression --> AND_expression
+production in line 58 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 58 : logical_AND_expression --> inclusive_OR_expression
+production in line 58 : logical_OR_expression --> logical_AND_expression
+production in line 58 : conditional_expression --> logical_OR_expression
+production in line 58 : assignment_expression --> conditional_expression
+production in line 58 : initialiser --> assignment_expression
+production in line 58 : init_declarator --> declarator = initialiser
+production in line 58 : init_declarator_list --> init_declarator
+production in line 58 : init_declarator_list_opt --> init_declarator_list
+production in line 58 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 58 : block_item --> declaration
+production in line 58 : block_item_list --> block_item_list block_item
+
+production in line 59 : type_specifier --> double
+production in line 59 : declaration_specifiers_opt --> epsilon 
+production in line 59 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 59 : pointer_opt --> epsilon
+production in line 59 : direct_declarator --> IDENTIFIER
+IDENTIFIER = a1
+production in line 59 : declarator --> pointer_opt direct_declarator
+production in line 59 : primary_expression --> FLOATING_CONSTANT
+FLOATING_CONSTANT = 1.500000
+production in line 59 : postfix_expression --> primary_expression
+production in line 59 : unary_expression --> postfix_expression
+production in line 59 : cast_expression --> unary_expression
+production in line 59 : multiplicative_expression --> cast_expression
+production in line 59 : additive_expression --> multiplicative_expression
+production in line 59 : shift_expression --> additive_expression
+production in line 59 : relational_expression --> shift_expression
+production in line 59 : equality_expression --> relational_expression
+production in line 59 : AND_expression --> equality_expression
+production in line 59 : exclusive_OR_expression --> AND_expression
+production in line 59 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 59 : logical_AND_expression --> inclusive_OR_expression
+production in line 59 : logical_OR_expression --> logical_AND_expression
+production in line 59 : conditional_expression --> logical_OR_expression
+production in line 59 : assignment_expression --> conditional_expression
+production in line 59 : initialiser --> assignment_expression
+production in line 59 : init_declarator --> declarator = initialiser
+production in line 59 : init_declarator_list --> init_declarator
+production in line 59 : init_declarator_list_opt --> init_declarator_list
+production in line 59 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 59 : block_item --> declaration
+production in line 59 : block_item_list --> block_item_list block_item
+
+production in line 60 : type_specifier --> double
+production in line 60 : declaration_specifiers_opt --> epsilon 
+production in line 60 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 60 : pointer_opt --> epsilon
+production in line 60 : direct_declarator --> IDENTIFIER
+IDENTIFIER = a2
+production in line 60 : declarator --> pointer_opt direct_declarator
+production in line 60 : primary_expression --> FLOATING_CONSTANT
+FLOATING_CONSTANT = 154.339996
+production in line 60 : postfix_expression --> primary_expression
+production in line 60 : unary_expression --> postfix_expression
+production in line 60 : cast_expression --> unary_expression
+production in line 60 : multiplicative_expression --> cast_expression
+production in line 60 : additive_expression --> multiplicative_expression
+production in line 60 : shift_expression --> additive_expression
+production in line 60 : relational_expression --> shift_expression
+production in line 60 : equality_expression --> relational_expression
+production in line 60 : AND_expression --> equality_expression
+production in line 60 : exclusive_OR_expression --> AND_expression
+production in line 60 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 60 : logical_AND_expression --> inclusive_OR_expression
+production in line 60 : logical_OR_expression --> logical_AND_expression
+production in line 60 : conditional_expression --> logical_OR_expression
+production in line 60 : assignment_expression --> conditional_expression
+production in line 60 : initialiser --> assignment_expression
+production in line 60 : init_declarator --> declarator = initialiser
+production in line 60 : init_declarator_list --> init_declarator
+production in line 60 : init_declarator_list_opt --> init_declarator_list
+production in line 60 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 60 : block_item --> declaration
+production in line 60 : block_item_list --> block_item_list block_item
+
+production in line 61 : type_specifier --> unsigned
+production in line 61 : declaration_specifiers_opt --> epsilon 
+production in line 61 : declaration_specifiers --> type_specifier declaration_specifiers_opt
+production in line 61 : pointer_opt --> epsilon
+production in line 61 : direct_declarator --> IDENTIFIER
+IDENTIFIER = l
+production in line 61 : declarator --> pointer_opt direct_declarator
+production in line 61 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = -572589576
+production in line 61 : postfix_expression --> primary_expression
+production in line 61 : unary_expression --> postfix_expression
+production in line 61 : cast_expression --> unary_expression
+production in line 61 : multiplicative_expression --> cast_expression
+production in line 61 : additive_expression --> multiplicative_expression
+production in line 61 : shift_expression --> additive_expression
+production in line 61 : relational_expression --> shift_expression
+production in line 61 : equality_expression --> relational_expression
+production in line 61 : AND_expression --> equality_expression
+production in line 61 : exclusive_OR_expression --> AND_expression
+production in line 61 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 61 : logical_AND_expression --> inclusive_OR_expression
+production in line 61 : logical_OR_expression --> logical_AND_expression
+production in line 61 : conditional_expression --> logical_OR_expression
+production in line 61 : assignment_expression --> conditional_expression
+production in line 61 : initialiser --> assignment_expression
+production in line 61 : init_declarator --> declarator = initialiser
+production in line 61 : init_declarator_list --> init_declarator
+production in line 61 : init_declarator_list_opt --> init_declarator_list
+production in line 61 : declaration --> declaration_specifiers init_declarator_list_opt ;
+production in line 61 : block_item --> declaration
+production in line 61 : block_item_list --> block_item_list block_item
+
+
+single line comment in line 62
+
+production in line 64 : primary_expression --> IDENTIFIER
+IDENTIFIER = q
+production in line 64 : postfix_expression --> primary_expression
+production in line 64 : unary_expression --> postfix_expression
+production in line 64 : cast_expression --> unary_expression
+production in line 64 : multiplicative_expression --> cast_expression
+production in line 64 : additive_expression --> multiplicative_expression
+production in line 64 : shift_expression --> additive_expression
+production in line 64 : relational_expression --> shift_expression
+production in line 64 : equality_expression --> relational_expression
+production in line 64 : AND_expression --> equality_expression
+production in line 64 : exclusive_OR_expression --> AND_expression
+production in line 64 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 64 : logical_AND_expression --> inclusive_OR_expression
+production in line 64 : logical_OR_expression --> logical_AND_expression
+production in line 64 : conditional_expression --> logical_OR_expression
+production in line 64 : assignment_expression --> conditional_expression
+production in line 64 : expression --> assignment_expression
+
+production in line 65 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 65 : postfix_expression --> primary_expression
+production in line 65 : unary_expression --> postfix_expression
+production in line 65 : cast_expression --> unary_expression
+production in line 65 : multiplicative_expression --> cast_expression
+production in line 65 : additive_expression --> multiplicative_expression
+production in line 65 : shift_expression --> additive_expression
+production in line 65 : relational_expression --> shift_expression
+production in line 65 : equality_expression --> relational_expression
+production in line 65 : AND_expression --> equality_expression
+production in line 65 : exclusive_OR_expression --> AND_expression
+production in line 65 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 65 : logical_AND_expression --> inclusive_OR_expression
+production in line 65 : logical_OR_expression --> logical_AND_expression
+production in line 65 : conditional_expression --> logical_OR_expression
+production in line 65 : constant_expression --> conditional_expression
+
+production in line 66 : primary_expression --> IDENTIFIER
+IDENTIFIER = q
+production in line 66 : postfix_expression --> primary_expression
+production in line 66 : unary_expression --> postfix_expression
+production in line 66 : assignment_operator --> =
+production in line 66 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 3
+production in line 66 : postfix_expression --> primary_expression
+production in line 66 : unary_expression --> postfix_expression
+production in line 66 : cast_expression --> unary_expression
+production in line 66 : multiplicative_expression --> cast_expression
+production in line 66 : additive_expression --> multiplicative_expression
+production in line 66 : shift_expression --> additive_expression
+production in line 66 : relational_expression --> shift_expression
+production in line 66 : equality_expression --> relational_expression
+production in line 66 : AND_expression --> equality_expression
+production in line 66 : exclusive_OR_expression --> AND_expression
+production in line 66 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 66 : logical_AND_expression --> inclusive_OR_expression
+production in line 66 : logical_OR_expression --> logical_AND_expression
+production in line 66 : conditional_expression --> logical_OR_expression
+production in line 66 : assignment_expression --> conditional_expression
+production in line 66 : assignment_expression --> unary_expression assignment_operator assignment_expression
+production in line 66 : expression --> assignment_expression
+production in line 66 : expression_opt --> expression
+production in line 66 : expression_statement --> expression_opt ;
+production in line 66 : statement --> expression_statement
+production in line 66 : labeled_statement --> case constant_expression : statement
+production in line 66 : statement --> labeled_statement
+production in line 66 : block_item --> statement
+production in line 66 : block_item_list --> block_item
+
+production in line 67 : primary_expression --> IDENTIFIER
+IDENTIFIER = q
+production in line 67 : postfix_expression --> primary_expression
+production in line 67 : unary_expression --> postfix_expression
+production in line 67 : cast_expression --> unary_expression
+production in line 67 : multiplicative_expression --> cast_expression
+production in line 67 : additive_expression --> multiplicative_expression
+production in line 67 : shift_expression --> additive_expression
+production in line 67 : relational_expression --> shift_expression
+production in line 67 : equality_expression --> relational_expression
+production in line 67 : primary_expression --> INTEGER_CONSTANT
+INTEGER_CONSTANT = 1
+production in line 67 : postfix_expression --> primary_expression
+production in line 67 : unary_expression --> postfix_expression
+production in line 67 : cast_expression --> unary_expression
+production in line 67 : multiplicative_expression --> cast_expression
+production in line 67 : additive_expression --> multiplicative_expression
+production in line 67 : shift_expression --> additive_expression
+production in line 67 : relational_expression --> shift_expression
+production in line 67 : equality_expression --> equality_expression == relational_expression
+production in line 67 : AND_expression --> equality_expression
+production in line 67 : exclusive_OR_expression --> AND_expression
+production in line 67 : inclusive_OR_expression --> exclusive_OR_expression
+production in line 67 : logical_AND_expression --> inclusive_OR_expression
+production in line 67 : logical_OR_expression --> logical_AND_expression
+production in line 67 : conditional_expression --> logical_OR_expression
+production in line 67 : assignment_expression --> conditional_expression
+production in line 67 : expression --> assignment_expression
+production in line 67 : jump_statement --> goto IDENTIFIER ;
+IDENTIFIER = no_reason
+production in line 67 : statement --> jump_statement
+
+production in line 68 : selection_statement --> if ( expression ) statement
+production in line 68 : statement --> selection_statement
+production in line 68 : block_item --> statement
+production in line 68 : block_item_list --> block_item_list block_item
+
+production in line 69 : jump_statement --> break ;
+production in line 69 : statement --> jump_statement
+production in line 69 : labeled_statement --> default : statement
+production in line 69 : statement --> labeled_statement
+production in line 69 : block_item --> statement
+production in line 69 : block_item_list --> block_item_list block_item
+
+
+production in line 71 : block_item_list_opt --> block_item_list
+production in line 71 : compound_statement --> { block_item_list_opt }
+production in line 71 : statement --> compound_statement
+production in line 71 : selection_statement --> switch ( expression ) statement
+production in line 71 : statement --> selection_statement
+production in line 71 : labeled_statement --> IDENTIFIER : statement
+IDENTIFIER = no_reason
+production in line 71 : statement --> labeled_statement
+production in line 71 : block_item --> statement
+production in line 71 : block_item_list --> block_item_list block_item
+
+production in line 72 : expression_opt --> epsilon
+production in line 72 : jump_statement --> return expression_opt ;
+production in line 72 : statement --> jump_statement
+production in line 72 : block_item --> statement
+production in line 72 : block_item_list --> block_item_list block_item
+
+production in line 73 : block_item_list_opt --> block_item_list
+production in line 73 : compound_statement --> { block_item_list_opt }
+production in line 73 : function_definition --> declaration_specifiers declarator declaration_list_opt compound_statement
+production in line 73 : external_declaration --> function_definition
+production in line 73 : translation_unit --> translation_unit external_declaration
