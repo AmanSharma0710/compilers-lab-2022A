@@ -1,0 +1,2 @@
+Run the following command to translate the test files
+./parser.out < ass5_20CS10003_20CS30063_test<number>.c > ass5_20CS10003_20CS30063_quads<number>.out
